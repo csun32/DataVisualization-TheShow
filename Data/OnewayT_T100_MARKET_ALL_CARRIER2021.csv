@@ -1,0 +1,276 @@
+
+AIRLINE_ID,Description,Sum(PASSENGERS)
+"19393","Southwest Airlines Co.: WN",123280232
+"19531","Air Canada: AC",1151970
+"19532","Compagnie Natl Air France: AF",1381600
+"19533","National Aviation Company of India Limited d/b/a Air India: AI",524637
+"19534","Aeromexico: AM",2266099
+"19535","Aerolineas Argentinas: AR",139996
+"19536","Royal Air Maroc: AT",182788
+"19537","Aerovias Nacl De Colombia: AV",719887
+"19538","Finnair Oy: AY",94405
+"19539","Italia Transporto Aereo S.P.A DBA ITA S.P.A: AZ",104359
+"19540","British Airways Plc: BA",1184886
+"19542","Caribbean Airlines Limited: BW",182609
+"19543","Air China: CA",34857
+"19544","China Airlines Ltd.: CI",22439
+"19545","Cargolux Airlines International S.A: CV",0
+"19546","Icelandair: FI",405898
+"19547","Iberia Air Lines Of Spain: IB",411647
+"19548","Japan Air Lines Co. Ltd.: JL",219979
+"19550","Korean Air Lines Co. Ltd.: KE",434957
+"19551","Klm Royal Dutch Airlines: KL",728353
+"19552","Lan-Chile Airlines: LA",287137
+"19554","Lufthansa German Airlines: LH",1622659
+"19555","Polskie Linie Lotnicze: LO",316825
+"19556","Lacsa: LR",97699
+"19558","El Al Israel Airlines Ltd.: LY",347942
+"19562","Polynesian Airlines Ltd.: PH",7321
+"19564","Philippine Airlines Inc.: PR",229862
+"19565","Surinam Airways Limited: PY",10704
+"19566","Qantas Airways Ltd.: QF",15752
+"19568","Alia-(The) Royal Jordanian: RJ",182598
+"19571","Scandinavian Airlines Sys.: SK",212158
+"19572","Singapore Airlines Ltd.: SQ",107016
+"19573","Aeroflot Russian Airlines: SU",356411
+"19574","Taca International Airlines: TA",963557
+"19576","Tap-Portuguese Airlines: TP",395775
+"19616","Kuwait Airways Corp.: KU",8713
+"19623","Aer Lingus Plc: EI",302456
+"19624","Saudi Arabian Airlines Corp: SV",114140
+"19682","Virgin Atlantic Airways: VS",449321
+"19687","Horizon Air: QX",5980274
+"19690","Hawaiian Airlines Inc.: HA",6525771
+"19747","Egyptair: MS",203370
+"19770","Compania Panamena (Copa): CM",1681042
+"19779","Cathay Pacific Airways Ltd.: CX",120323
+"19790","Delta Air Lines Inc.: DL",103143586
+"19791","All Nippon Airways Co.: NH",239894
+"19805","American Airlines Inc.: AA",116193232
+"19821","Turk Hava Yollari A.O.: TK",1780564
+"19830","Nippon Cargo Airlines: KZ",0
+"19855","Bradley Air Services Ltd.: BCQ",143
+"19869","Britannia Airways Ltd.: BY",73
+"19873","Austrian Airlines: OS",189304
+"19874","Air Transport International: 8C",2
+"19912","Cayman Airways Limited: KX",36509
+"19917","United Parcel Service: 5X",0
+"19930","Alaska Airlines Inc.: AS",23267390
+"19933","Air New Zealand: NZ",32909
+"19953","Transportes Aereos Mercantiles Panamericanos S.A: QT",0
+"19958","China Eastern Airlines: MU",35759
+"19961","Air Transat: TS",60207
+"19977","United Air Lines Inc.: UA",72586044
+"20005","Eva Airways Corporation: BR",121177
+"20007","Atlas Air Inc.: 5Y",7153
+"20046","Air Wisconsin Airlines Corp: ZW",3428805
+"20059","Air Pacific Ltd.: FJ",21472
+"20080","Uzbekistan Airways: HY",29628
+"20100","Polar Air Cargo Airways: PO",0
+"20107","Federal Express Corporation: FX",0
+"20108","Northern Air Cargo Inc.: NC",0
+"20110","Antonov Company: ADB",0
+"20111","DHL Aero Expresso: DHQ",0
+"20119","Air Europa: UX",75842
+"20120","Condor Flugdienst: DE",53399
+"20133","China Southern Airlines: CZ",67179
+"20148","Martinair Holland N.V.: MP",0
+"20151","Amerijet International: M6",0
+"20153","Ethiopian Airlines: ET",366523
+"20156","ABSA-Aerolinhas Brasileiras: M3",0
+"20162","Air Tahiti Nui: TN",64169
+"20166","Gulf And Caribbean Cargo: GFQ",0
+"20167","Transportes Aeros Meridiona: JJ",137010
+"20169","Lynden Air Cargo Airlines: L2",0
+"20177","Asia Pacific: PFQ",0
+"20188","Lan Peru Airlines: LP",416218
+"20190","Southern Air Inc.: 9S",0
+"20195","Sky Lease Cargo: WI",0
+"20200","Challenge Airlines (IL) Ltd.: 5C",0
+"20201","Ameristar Air Cargo: AMQ",1508
+"20206","Jazz Aviation LP: QK",1138246
+"20207","TEM Enterprises dba  Avelo Airlines: XP",344393
+"20222","Estafeta Carga Aereas: E7",0
+"20224","Katmai Air: KAT",9644
+"20226","Spernak Airways Inc.: SNK",3556
+"20229","Westjet: WS",834478
+"20233","Swiss International Airlines: LX",441364
+"20250","Aerolitoral: 5D",250719
+"20253","Cape Air: 9K",427736
+"20257","Bemidji Airlines: CH",0
+"20261","Ellis Air Taxi Inc.: ELL",356
+"20263","Empire Airlines Inc.: EM",1502
+"20267","Grand Canyon Helicopters: GCH",0
+"20272","Kenmore Air Harbor: KAH",78224
+"20273","New England Airlines Inc.: NEW",33196
+"20277","Asiana Airlines Inc.: OZ",227477
+"20280","Seaborne Virgin Islands, Inc.: SEB",30528
+"20289","Friday Harbor Seaplanes: WST",5525
+"20303","Nolinor Aviation: NLQ",836
+"20304","SkyWest Airlines Inc.: OO",35506382
+"20310","Caribbean Sun Airlines, Inc. d/b/a World Atlantic Airlines: WL",83840
+"20313","Cargojet Airways Ltd.: W8",0
+"20319","Smokey Bay Air Inc.: 2E",13271
+"20322","Bidzy Ta Hot Aana, Inc. d/b/a Tanana Air Service: Z3",5877
+"20323","Warbelow: 4W",12686
+"20327","Northern Pacific Airways, Inc. Dba  Ravn Alaska: 7H",197216
+"20330","Ryan Air f/k/a Arctic Transportation: 7S",5710
+"20331","Bering Air Inc.: 8E",85300
+"20333","Wright Air Service: 8V",63901
+"20337","Kalinin Aviation LLC d/b/a Alaska Seaplanes: J5",59835
+"20341","Alaska Central Express: KO",14948
+"20342","40-Mile Air: Q5",849
+"20346","Iliamna Air Taxi: V8",8623
+"20348","Lan Ecuador: XL",0
+"20360","Sata Internacional: S4",64296
+"20362","China Cargo Airline: CK",0
+"20363","Endeavor Air Inc.: 9E",12880515
+"20366","ExpressJet Airlines LLC d/b/a aha!: EV",9231
+"20368","Allegiant Air: G4",13734567
+"20370","Kalitta Air LLC: KAQ",0
+"20372","Kalitta Charters II: KLQ",0
+"20377","Omni Air International LLC: X9",51898
+"20378","Mesa Airlines Inc.: YV",9966038
+"20380","SkyLink Express Inc.: PEQ",0
+"20383","Venture Travel LLC d/b/a Taquan Air Service: K3",3100
+"20392","Emirates: EK",1232660
+"20397","PSA Airlines Inc.: OH",12435016
+"20398","Envoy Air: MQ",13379075
+"20401","Silver Airways: 3M",466372
+"20405","National Air Cargo Group Inc d/ba National Airlines: N8",5614
+"20408","Tatonduk Outfitters Limited d/b/a Everts Air Alaska and Everts Air Cargo: 5V",8005
+"20409","JetBlue Airways: B6",30239767
+"20416","Spirit Air Lines: NK",30770259
+"20422","Sun Country Airlines d/b/a MN Airlines: SY",3057461
+"20424","Grand Canyon Airlines, Inc. d/b/a Grand Canyon Airlines d/b/a Scenic Airlines: YR",45306
+"20426","Vieques Air Link Inc.: VI",67207
+"20427","Piedmont Airlines: PT",3800727
+"20428","Volga-Dnepr Airlines: VIQ",0
+"20436","Frontier Airlines Inc.: F9",20654583
+"20443","Island Air Service: 2O",20874
+"20445","Commutair Aka Champlain Enterprises, Inc.: C5",2911180
+"20446","Aerotransportes Mas De Crga: M7",0
+"20447","USA Jet Airlines Inc.: U7",0
+"20452","Republic Airline: YX",17701767
+"20453","ABX Air Inc: ABX",0
+"20455","Grant Aviation: GV",137112
+"20500","GoJet Airlines LLC d/b/a United Express: G7",2395855
+"21022","PM Air, LLC: Z3Q",35992
+"21040","Titan Airways: 02Q",510
+"21061","Aerounion Aerotransporte de Carga Union SA de CV: 6R",0
+"21080","Tradewind Aviation: 04Q",43339
+"21107","Etihad Airways: EY",225693
+"21136","Flair Airlines Ltd.: 07Q",15527
+"21147","Flying Service N.V.: 0Q",111
+"21158","Global Jet Austria, GmbH: IGA",18
+"21160","Global Jet Luxembourg, Sa: SVW",276
+"21161","Swift Air, LLC d/b/a Eastern Air Lines d/b/a Eastern: 09Q",880591
+"21186","DCA: 0BQ",133
+"21196","ACM AIR CHARTER GmbH: 0CQ",95
+"21202","CAT Aviation: CAZ",162
+"21226","Porter Airlines, Inc.: PD",107032
+"21231","Sunwing Airlines Inc.: WG",540
+"21253","Multi-Aero, Inc. d/b/a Air Choice One: 3E",17943
+"21262","Qatar Airways (Q.C.S.C): QR",1657223
+"21308","TAG Aviation (UK) Ltd.: 0QQ",10
+"21331","Comlux Malta, Ltd.: 0UQ",67
+"21342","Aeroenlaces Nacionales, S.A. de C.V. d/b/a VivaAerobus: VB",1708659
+"21351","Concesionaria Vuela Compania De Aviacion SA de CV (Volaris): Y4",3775362
+"21376","Lan Colombia: L7",0
+"21386","Air Excursions LLC: X4",8852
+"21402","Prescott Support Company, Inc.: PM",0
+"21406","Acropolis Aviation Ltd.: CRV",92
+"21407","Swiss Air Ambulance: 10Q",38
+"21416","Jin Air Co Ltd.: LJ",10309
+"21423","Unijet: 12Q",4
+"21427","AeroLogic GmbH: 3S",0
+"21437","Chartright Air Inc.: 13Q",7619
+"21439","London Air Services Limited: 14Q",1017
+"21440","Air Alsie A/S: 15Q",438
+"21447","Albinati Aeronautics SA: 17Q",5
+"21487","AirBridgeCargo Airlines Limited: RU",0
+"21492","Eastern Airlines f/k/a Dynamic Airways, LLC: 1BQ",123202
+"21507","Aerogal: 2K",4552
+"21518","KaiserAir, Inc.: 1EQ",11634
+"21548","International Jet Management GmbH: 1HQ",200
+"21567","Brussels Airlines N.V.: SN",36074
+"21568","VistaJet Limited: VJT",6548
+"21570","Star Marianas Air Inc.: 1SQ",66045
+"21573","Bertelsmann Aviation GmbH: 1LQ",4
+"21577","Rhoades Aviation dba Transair: 1TQ",0
+"21580","Cargolux Italia SpA: C8",0
+"21582","Reeve Air Alaska, LLC: RVQ",2648
+"21590","Gainjet Aviation SA: 1UQ",277
+"21594","Scott Air LLC dba Island Air Express: I4",24555
+"21596","Ultimate JetCharters LLC dba Ultimate Air Shuttle: 1WQ",24971
+"21599","Boutique Air: 4B",105189
+"21601","Dassault Falcon Service: 1XQ",22
+"21610","Air Canada rouge LP: RV",210175
+"21611","Sky Regional Airlines Inc.: KV",46035
+"21614","City Wings Inc dba Seaflight: 1QQ",10401
+"21615","Air Charter, Inc d/b/a Air Flamenco: 1YQ",25760
+"21618","Southern Airways Express, dba Mokulele Airlines: 9X",324634
+"21626","Dreamjet SAS Dba La Compagnie: B0",7547
+"21629","Western Global: KD",0
+"21630","Comlux Aruba NV: 1ZQ",800
+"21634","Aloha Air Cargo: KH",0
+"21635","CFM Inc d/b/a Contour Airlines d/b/a One Jet Shuttle: LF",158142
+"21636","Gem Air LLC: 22Q",536
+"21638","Azul Linhas Aereas Brazileiras S A: AD",97628
+"21646","Jet Story: 24Q",130
+"21649","Mjet GmbH: 25Q",22
+"21651","Albinati aviation Limited: 26Q",44
+"21652","Jet Aviation Flight Services, Inc.: 27Q",5056
+"21656","ABS JETS A.S: 2AQ",54
+"21670","Fast Colombia SAS d/b/a Viva Colombia: VH",143669
+"21673","J&M Alaska Air Tours, Inc. d/b/a Alaska Air Transit: 2EQ",4459
+"21693","Cavok Air LLC: 2GQ",0
+"21694","Silk Way West Airlines: 7L",0
+"21712","Elite Airways LLC: 2HQ",22416
+"21718","Delux Public Charter LLC: 2JQ",339558
+"21735","Longtail Aviation Ltd.: 2KQ",0
+"21738","Air Serbia: JU",61702
+"21743","Tropic Ocean Airways LLC: 2LQ",14913
+"21749","Talofa Airways Limited: 2OQ",1003
+"21770","Xiamen Airlines Co., Ltd.: MF",32260
+"21814","Svenskt Industriflyg AB: 2UQ",50
+"21820","Paklook Air, Inc d/b/a/ Airlift Alaska d/b/a/ Yute Commuter Service: K2",30330
+"21835","Public Charters, Inc. d/b/a North Country Sky d/b/a Regional Sky d/b/a Texas Sky: 30Q",60
+"21854","Polaris Aviation Solutions, LLC: 34Q",1
+"21869","Air Hamburg Luftverkehrsgesellschaft mbH: 36Q",325
+"21879","Key Lime Air Corporation: 38Q",71887
+"21889","Evelop Airlines SL: E9",1417
+"21894","ADVANCED AIR, LLC: AN",33623
+"21909","Maritime Helicopters, Inc.: 3AQ",4698
+"21944","Nealco Air Charter Services, Inc.  d/b/a  Watermakers Air: 3BQ",17026
+"21949","Kenya Airways PLC: KQ",31758
+"21974","Scott Aviation, LLC  d/b/a  Silver Air: 3EQ",10071
+"21979","Western Air Charter, Inc.  d/b/a  Jet Edge: 3FQ",37421
+"22001","Vuela Aviacion, S.A.: Q6",69037
+"22010","FAI rent-a-jet AG: IFQ",258
+"22016","TAG Aviation (Malta) Ltd.: TEQ",31
+"22020","Gestair, S.A.: GEQ",11
+"22025","Skyfirst Limited: KFQ",10
+"22030","French bee: BF",51429
+"22035","Sparfell Luftfahrt GmbH: LDQ",54
+"22036","Challenge Airlines (BE) S.A.: X7",0
+"22048","Concierge U Ltd. d/b/a Jet Concierge Club: JCO",227
+"22052","Elitavia Malta Limited: EAU",31
+"22061","Volkswagen AirSevice GmbH dba Volkswagon: WGT",157
+"22062","Hyperion Aviation Ltd. dba Hyperion: HYP",15
+"22067","SWOOP Inc.: WO",20819
+"22069","ZIPAIR Tokyo Inc.: ZG",2549
+"22072","WAMOS AIR SA: EB",399
+"22073","MHS Aviation GmbH: M2",11
+"22074","Avon Jet AG: AOQ",322
+"22075","Junipogo, LLC: 3KQ",61
+"22076","Silk Way Airlines, LLC: ZPQ",0
+"22077","Hamilton Jetport Limited: HAQ",602
+"22078","Air Senegal S.A: HC",12500
+"22079","Neos S.P.A: NOS",2470
+"22080","Breeze Aviation Group DBA  Breeze: MX",320138
+"22083","Baranautica Air Service LLC: BAS",181
+"22085","Global Crossing Airlines, Inc.: GCA",40072
+"22087","AVCON JET MALTA LTD: NIQ",48
+"22090","EUROWINGS DISCOVER GmbH: 4Y",3071
+"All Rows","All Rows (including those not displayed)",703464518
