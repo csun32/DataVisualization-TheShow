@@ -1,0 +1,220 @@
+---
+title: "The Show (Airline)"
+author: "Andy Sun"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Packages
+
+```{r}
+library(data.table)
+library(dplyr)
+library(ggplot2)
+library(gridExtra)
+library(ggthemes)
+library(lubridate)
+library(scales)
+library(maps)
+library(tidycensus)
+library(sf)
+library(stringr)
+library("tidyr")
+library("reshape")
+library("reshape2")
+```
+
+## load Data
+```{r}
+flightData <- data.table::fread("flightData2.csv")
+cancellationReasons <- data.table::fread("L_CANCELLATION.csv")
+carrierCodes <- data.table::fread("L_UNIQUE_CARRIERS.csv")
+```
+## flight count Data Prep
+```{r}
+#Clean the look up tables
+cancellationReasons <- cancellationReasons %>% dplyr::rename(CancellationReasonDescription = Description)
+
+carrierCodes <- carrierCodes %>% dplyr::rename(AirlineCarrier = Description)
+
+
+#Join the look up tables
+flightData <- left_join(flightData, carrierCodes, by = c("Reporting_Airline" = "Code"))
+
+flightData <- left_join(flightData, cancellationReasons, by = c("CancellationCode" = "Code"))
+
+#Remove "Airline" etc from the carrier - keep only the first word
+flightData$AirlineCarrier <- str_extract(flightData$AirlineCarrier, "^([^\\s]+)")
+
+#Find the week of the date of departure
+flightData$week <- floor_date(flightData$FlightDate, "week")
+
+#Find day of week
+flightData$dayOfWeek <- wday(flightData$FlightDate, abbr = TRUE, label = TRUE)
+
+#Colors as defined by our group via Canvas and the check-ins
+color_palette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
+#Summarize the data and create graphics
+
+#Line graph - Number of Flights by Airlines over time
+numFlightsByCarrierDate <- flightData %>%
+                          group_by(AirlineCarrier, week) %>%
+                          summarise(numFlights = n())
+
+#Find the top 5 by number of flights by week
+topFiveAirlines <- numFlightsByCarrierDate %>% 
+  arrange(desc(numFlights)) %>% 
+  group_by(week) %>% slice(1:4)
+```
+
+#line graph of the number of flights per week by major airlines
+```{r}
+numberOfFlightsOverTime <- ggplot(data=topFiveAirlines, aes(x=week, y=numFlights/1000, 
+                                                            colour= AirlineCarrier))+
+  geom_line()+
+  labs(x="Date", y="Number of Flights Per Week (K)")+
+  theme_tufte(ticks = TRUE)+
+  theme(legend.position="bottom",
+        legend.title= element_blank())+
+  scale_color_manual(values=c("#56B4E9","#D55E00", "#009E73","#E69F00"))+ #add color dark blue, Red, light blue, Orange
+  scale_y_continuous(n.breaks = 15)+
+  ggtitle("Top 4 Airlines Per Week by Flight Count")
+numberOfFlightsOverTime 
+```
+## heatmap Data Prep
+```{r}
+data(state.fips)
+
+variablesToQuery <- load_variables(2020, "acs5", cache = TRUE)
+
+
+Sys.getenv("CENSUS_API_KEY")
+
+geometry <- get_acs(geography = "state",
+                    variables = 	
+                      "B01001_001", 
+                    year = 2020, geometry = TRUE)
+
+topAirlinesMaps <- flightData %>% group_by(AirlineCarrier) %>%
+  summarise(numFlights = n())
+
+topAirlinesMaps <- topAirlinesMaps %>% 
+  arrange(desc(numFlights)) %>% 
+  slice(1:4)
+
+topAirlinesMaps <- unique(topAirlinesMaps$AirlineCarrier)
+
+numOriginFips <- flightData %>% filter(AirlineCarrier %in% topAirlinesMaps) %>% 
+  group_by(AirlineCarrier,OriginStateFips) %>%
+  summarise(numFlights = n())
+
+geometry$GeoInt <- as.integer(geometry$GEOID)
+
+numOriginFips <- geometry  %>% 
+  left_join(numOriginFips, by=c('GeoInt'='OriginStateFips')) 
+#numOriginFipsTest %>% map("state", fill=TRUE, col=numOriginFipsTest$numFlights)
+
+numOriginFips <- numOriginFips %>% tidyr::drop_na(AirlineCarrier)
+
+numOriginFips <- numOriginFips %>% filter(GeoInt <=56 ) %>% 
+  filter(GeoInt != 2) %>% filter(GeoInt != 15)
+```
+
+##heat map for the number of flights by origin state
+#Which airline has the most origin flights in ameria?
+```{r}
+numberofFlightsbyOriginState <- ggplot(data = numOriginFips, aes(fill = numFlights)) +
+  facet_wrap(~AirlineCarrier, nrow = 2, ncol = 2) +
+  geom_sf() +
+  theme_void() +
+  scale_fill_distiller(labels=function(x) format(x, big.mark = ",", scientific = FALSE), palette = "Blues", direction = 1) +
+  labs(title = "Number of Flights by Origin State by Top Four Airlines",
+       caption = "Lower 48 States Only. 2020-2021.")
+numberofFlightsbyOriginState
+```
+## Major airline Cancellation data prep
+```{r}
+meltFlightCancel <- flightData %>% select(AirlineCarrier, CancellationReasonDescription)
+meltFlightCancel <- na.omit(meltFlightCancel)
+meltFlightCancel <- meltFlightCancel[meltFlightCancel$AirlineCarrier %in% 
+                           c("American", "Southwest", "United", "Delta"), ]  
+cancel_summary<-meltFlightCancel %>%
+  group_by(AirlineCarrier,CancellationReasonDescription) %>% 
+  summarise(n = n())
+
+x<-reorder(cancel_summary$AirlineCarrier, cancel_summary$n)
+```
+## Major airline Cancellation bar graph
+```{r}
+cancelllationPercent <- grid.arrange(
+  ggplot(cancel_summary)+
+    geom_bar(fill="#0072B2",stat='identity',aes(x=x, y=n/1000))+
+    ggtitle("Major Airlines Cancellation Counts")+
+    labs(x="Arline",y="Count (K)")+
+    coord_flip()+
+    scale_y_continuous(position="right")+
+    theme_tufte(),
+  ggplot(cancel_summary, aes(x=x, y=n/1000, fill=CancellationReasonDescription))+
+    geom_bar(position = "fill",stat='identity')+
+    scale_fill_manual(name = "Canceled Reason",
+                      values=c("#56B4E9","#D55E00", "#009E73","#E69F00"))+ #add color dark blue and gray 
+    ggtitle("Major Airlines Canceled Reason Distrbution")+
+    labs(x="Arline",y="Count (K)")+
+    coord_flip()+
+    scale_y_continuous(labels = scales::percent_format(),position="right")+
+    theme_tufte()+
+    theme(legend.position="bottom",
+          axis.title.x=element_blank())
+)
+cancelllationPercent
+```
+# airline Delay data prep
+```{r}
+#Section for Melted data
+meltFlight <- flightData %>% select(AirlineCarrier, week, CarrierDelay, WeatherDelay, NASDelay, SecurityDelay, LateAircraftDelay)
+
+meltFlight$AirlineCarrier <- as.factor(meltFlight$AirlineCarrier)
+
+#meltFlight$id <- c(1:nrow(meltFlight))
+
+meltFlight <- melt(meltFlight, id.vars = c("AirlineCarrier", "week"))
+
+
+#Avg for
+mean(meltFlight$value)
+
+
+## Sum of Delay minutes
+meltFlight <- na.omit(meltFlight)
+
+typeOfDelay <- meltFlight %>%
+  group_by(AirlineCarrier, variable) %>%
+  summarise(totalMinutes = sum(value), mean = mean(value))
+
+
+
+typeOfDelay <- typeOfDelay %>% 
+  filter(variable == 'CarrierDelay' ) %>%
+arrange(desc(mean))
+
+typeOfDelay <- typeOfDelay[1:4,]
+```
+## Delay bar chart
+```{r}
+avgCarrierDelay <- ggplot(data = typeOfDelay) +
+  geom_bar(stat = "identity",  fill = "#0072B2",
+           aes(x = AirlineCarrier, y = mean),
+           position=position_dodge() ) +
+  scale_y_continuous(n.breaks = 15)   + 
+  ggtitle("Top 4 Airlines: Average Carrier Delay") + 
+  xlab("Airline")  + ylab("Average Delay (Minutes)") + 
+  guides(fill=guide_legend(title="Airline")) +
+  labs(caption = "2020-2021.") +
+  theme_tufte()
+avgCarrierDelay
+```
+
