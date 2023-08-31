@@ -1,0 +1,67 @@
+#455 The Show Data Dictionary#
+
+Directory: Airline Data
+Filename: flightData2.csv
+Description: Contains reporting information that carriers are required to report on-time data for flights they operate. Contains the following information per flight per carrier: on-time arrival and departure data for non-stop domestic flights by month and year, by carrier and by origin and destination airport. Includes scheduled and actual departure and arrival times, canceled and diverted flights, taxi-out and taxi-in times, causes of delay and cancellation, air time, and non-stop distance.
+Chicago Source: U.S. Department of Transportation. Federal Aviation Administration. Airline On-Time Statistics and Delay Causes. Washington, D.C. 2020-2022. https://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp 
+
+Directory: Airline Data
+Filename: L_CANCELLATION.csv
+Description: A crosswalk from the FAA single character code to the description. Example: code A indicates there was a delay due to the Carrier.  
+Chicago Source:  U.S. Department of Transportation. Federal Aviation Administration. Specifies The Reason For Cancellation. Washington, D.C. 2022. https://www.transtats.bts.gov/FieldInfo.asp?Svryq_Qr5p=f2rpvsvr5%FDgur%FDern510%FDS14%FDPn0pryyn6v10&Svryq_gB2r=Pun4&Y11x72_gnoyr=Y_PNaPRYYNgVba&gnoyr_VQ=FGJ&flf_gnoyr_anzr=g_bagVZR_eRcbegVaT&fB5_Svryq_anzr=PNaPRYYNgVba_PbQR
+
+Directory: Airline Data
+Filename: L_UNIQUE_CARRIERS.csv
+Description: A crosswalk from the two alpa-numeric code for each airline to their consumer description. Example: WN is mapped to Southwest.
+Chicago Source: U.S. Department of Transportation. Federal Aviation Administration. Unique Carrier Code. Washington, D.C. 2022. 
+https://www.transtats.bts.gov/FieldInfo.asp?Svryq_Qr5p=h0v37r%FDPn44vr4%FDP1qr.%FDjur0%FD6ur%FD5nzr%FDp1qr%FDun5%FDorr0%FD75rq%FDoB%FDz7y6v2yr%FDpn44vr45%FP%FDn%FD07zr4vp%FD57ssvA%FDv5%FD75rq%FDs14%FDrn4yvr4%FD75r45%FP%FDs14%FDrAnz2yr%FP%FDcN%FP%FDcN%FLE%FM%FP%FDcN%FLF%FM.%FDh5r%FD6uv5%FDsvryq%FDs14%FDn0nyB5v5%FDnp4155%FDn%FD4n0tr%FD1s%FDBrn45.&Svryq_gB2r=Pun4&Y11x72_gnoyr=Y_haVdhR_PNeeVRef&gnoyr_VQ=FGJ&flf_gnoyr_anzr=g_bagVZR_eRcbegVaT&fB5_Svryq_anzr=bc_haVdhR_PNeeVRe
+
+Directory: Intro Data
+Title: Air Trafic Demand
+Filename: AviationPassengers.csv
+Description: The dataset contains the U.S. air traffic by passengers for all U.S. and foreign carriers between 2002 to 2022. This dataset is to visualize the growth of the aviation industry and the disruption of the covid-19 pandemic to air travel. 
+Chicago Source: “Passengers All U.S. Carriers - All Airports.” U.S. Department of Transportation. Research and Innovative Technology Administration
+Bureau of Transportation Statistics. Washington, DC: 2005. https://transtats.bts.gov/Data_Elements.aspx?Data=4.
+
+Directory: Intro Data
+Title: Airline Market Share
+Filename: OnewayT_T100_MARKET_ALL_CARRIER2021.csv
+Description: The dataset contains airline market share by passengers in 2022, and it gives us and high-level view of the major airlines operating in the U.S
+Chicago Source:“T-100 Market (US Carriers Only).” U.S. Department of Transportation. Research and Innovative Technology Administration
+Bureau of Transportation Statistics. Washington, DC: 2005. https://transtats.bts.gov/tables.asp?gnoyr_VQ=FIL&flf_gnoyr_anzr=g_gEDDQ_ZNeXRg_hf_PNeeVRe_baYl.
+
+Directory: Intro Data
+Title: Transpiration Modes Fatality
+Filename: transportation_fatalities_usafacts.csv
+Description: USAFacts scraped data from the National Transportation Statistics report, and the data set contains fatalities recorded in the U.S. for various transportation modes between 1960 and 2020.
+Chicago Source: “Transportation Fatalities.” USAFacts. Accessed November 26, 2022. https://usafacts.org/data/topics/people-society/transportation/safety/transportation-fatalities/.
+
+Directory: Safety Data
+Filename: unruly_passengers_data.csv
+Description: Dataset containing the number of unruly passenger investigations initiated by the Federal Aviation Administration from 1995-2022.
+Chicago Source: “Unruly Passengers.” Unruly Passengers | Federal Aviation Administration. Accessed October 26, 2022. https://www.faa.gov/data_research/passengers_cargo/unruly_passenger.  
+
+Directory: Safety Data
+Filename: owid-covid-data.csv
+Description: Dataset by Our World in Data containing information about the COVID-19 pandemic, including information such as fatalities and vaccination count. Updated population estimates according to the United Nations are also included.
+Chicago Source: Mathieu E;Ritchie H;Ortiz-Ospina E;Roser M;Hasell J;Appel C;Giattino C;Rodés-Guirao L; “A Global Database of COVID-19 Vaccinations.” Nature human behavior. U.S. National Library of Medicine. Accessed October 26, 2022. https://pubmed.ncbi.nlm.nih.gov/33972767/.    
+
+Directory: Airport Data
+Filename: airport volume.xlsx
+Description: Dataset containing U.S. operating domestic and international flights point-to-point and the departure and arrival airports. 
+Chicago Source: “Passengers All Carriers - All Airports.” Data Elements. The Bureau of Transportation Statistics. Accessed November 30, 2022. https://www.transtats.bts.gov/Data_Elements.aspx?Data=1.
+
+Directory: Airport Data
+Filename: Airport_Delay_Cause.xlsx
+Description: Dataset containing flight delays by cause for all U.S. airports. The data set includes numbers of on time, air carrier delay, security delay, national aviation system delay, extreme weather, and cancelled & diverted flights. 
+Chicago Source: “Airline On-Time Statistics and Delay Causes.” BTS. The Bureau of Transportation Statistics. Accessed November 30, 2022. https://www.transtats.bts.gov/OT_Delay/ot_delaycause1.asp?6B2r=FE&20=E.
+
+Directory: Cost
+Filename: Averagefare.csv
+Description: BTS reports average fares based on domestic itinerary fares. Itinerary fares consist of round-trip fares, unless the customer does not purchase a return trip. In that case, the one-way fare is included. Fares are based on the total ticket value, which consists of the price charged by the airlines plus any additional taxes and fees levied by an outside entity at the time of purchase. Fares include only the price paid at the time of the ticket purchase and do not include fees for optional services, such as baggage fees. Averages do not include frequent-flyer or “zero fares.”  Constant 2022 dollars are used for inflation adjustment.
+Chicago Source: Bureau of Transportation Statistics. “Air Fares.” October 18, 2022. https://www.bts.gov/air-fares. 
+
+Directory: Cost
+Filename: cancelfees.csv
+Description: Airlines ranked by full year reservation cancellation/change fee revenue, dollars in thousands (000) 
+Chicago Source: Bureau of Transportation Statistics. “Cancellation/Change Fees.” September 9, 2022. https://www.bts.gov/topics/airlines-and-airports/reservation-cancellationchange-fees-airline-2022
