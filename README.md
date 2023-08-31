@@ -8,7 +8,9 @@ pandemic affected air travel overall
 The Prezi presentation slides can be found [here](https://prezi.com/p/cn4e3ndvlptc/?present=1)
 ## Methodology/Code
 The team used R and Python to create clear and concise charts and diagrams to showcase our findings.
-#[Introduction](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Introduction-Vis-.html)
+
+[Introduction](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Introduction-Vis-.html)
+[Airline](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The%20Show%20(Airline).html)
 
 ## Questions/Feedback
 
