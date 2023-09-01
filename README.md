@@ -1,5 +1,6 @@
 # Data Visualization(The Show) September 2022 - December 2022
 2022 Fall MSDS 455 Final Group Project at Northwestern University
+
 Contributors: Andy Sun, Kevin Feng, Amber Reeves, William Burke
 
 Due to the drastic change in the aviation industry during the COVID-19 pandemic, The team wanted to investigate the impact on the industry and how the COVID-19
