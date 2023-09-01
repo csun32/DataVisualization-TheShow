@@ -14,6 +14,8 @@ The team used R and Python to create clear and concise charts and diagrams to sh
 
 [Airline](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The%20Show%20(Airline).html)
 
+[Airport](://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Introduction-Vis-.html)
+
 ## Questions/Feedback
 
 Email Andy Sun at andy.csun32@gmail.com
