@@ -1,0 +1,104 @@
+---
+title: "The Show"
+author: "Kevin Feng"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load Packages
+
+```{r}
+library(dplyr)      # Data frame manipulation
+library(tidyr)      # Data frame transformation
+library(lubridate)  # Date operations
+library(ggplot2)    # Plots
+library(ggrepel)    # Nice labels
+library(readxl)     # Import Excel
+library(wesanderson) # Color Palettes
+library(rnaturalearth) # Map Graph
+library(ggspatial)
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(scales)
+library(usmap)
+library(webr)
+library(ggthemes)
+```
+
+## Color Theme
+```{r}
+color_palette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+show_col(color_palette)
+```
+
+## Plot 1
+```{r}
+# Import Data
+df<- read_excel("airport volume.xlsx")
+head(df)
+glimpse(df)
+
+# Subset the Top 10 busiest airports in US
+top10 <-head(df, 10)
+
+# Create Map
+worldmap <- ne_countries(scale = 'medium', type = 'map_units',
+                         returnclass = 'sf')
+usa <- worldmap[worldmap$name == 'United States',]
+state <- map_data("state")
+
+# Plot
+ggplot() +
+  geom_sf(data = usa, color = '#56B4E9', alpha = 0.1, show.legend = FALSE, fill = "darkgray") +
+  borders("state", xlim = c(-125, -65), ylim = c(24, 50), size = 0.2) +
+  geom_point(data = top10, aes(x = longitude, y = latitude, size = Flight_Volumn), color="#0072B2") +
+  geom_text_repel(data = top10, nudge_x = 0.2, nudge_y = -0.015,
+                  aes(x = longitude, y = latitude, label = Airport_Code))+
+  coord_sf(xlim = c(-125, -64), ylim = c(24, 50))+
+  scale_color_manual("FlightVolumn",values = rep('#E69F00', 10)) +
+  scale_size(labels = label_number( suffix = "K", scale = 1e-3, big.mark = ",")) +
+  theme_void() +
+  theme(legend.position="bottom")+
+  guides(color = guide_legend(override.aes = list(size = 0)))+ 
+  labs(size = "Total Operation Flights")
+```
+## Plot 2
+```{r}
+# Plot
+ggplot(top10, aes(x = reorder(Airport_Code, -Flight_Volumn), y = Flight_Volumn)) + 
+  geom_bar(fill="#0072B2", stat = "identity")+ 
+  geom_text(aes(label=format(Flight_Volumn, big.mark = ",")), position=position_dodge(width=0.9), vjust=-0.25)+
+  scale_y_continuous(labels = label_number( scale = 1e-3, big.mark = ","))+
+  labs(x ="Airport", y = "Operation Flights")+
+  theme_tufte(ticks = FALSE) + 
+  theme(
+    axis.text.y=element_blank(),
+    axis.ticks.y=element_blank())
+```
+## Plot 3
+```{r}
+# Import Data
+df2<- read_excel("Airport_Delay_Cause.xlsx")
+head(df2)
+glimpse(df2)
+
+df2.1 = df2%>% group_by(Airport, On_Time) %>% summarise(n=sum(Value))
+
+# Highest On-Time ATL
+PieDonut(df2.1,aes(Airport, On_Time, count= n),
+         selected=1,
+         labelposition=1,
+         explode= 1,4,
+         showRatioThreshold = F)
+
+# Lowest On-Time DFW
+PieDonut(df2.1,aes(Airport, On_Time, count= n),
+         selected=1,
+         labelposition=1,
+         explode=4,
+         showRatioThreshold = F)
+```
