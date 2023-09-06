@@ -12,7 +12,7 @@ The team used R and Python to create clear and concise charts and diagrams to sh
 
 [1. Introduction](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Introduction-Vis-.html)
 
-6. Cost Saving
+[2. Cost Saving](https://htmlpreview.github.io/?)
 
 [3. Airport](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Airport-.html)
 
