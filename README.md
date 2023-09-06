@@ -10,13 +10,15 @@ The Prezi presentation slides can be found [here](https://prezi.com/p/cn4e3ndvlp
 ## Methodology/Code
 The team used R and Python to create clear and concise charts and diagrams to showcase our findings. Below are .html formats of the .rmd files
 
-[Introduction](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Introduction-Vis-.html)
+[1. Introduction](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Introduction-Vis-.html)
 
-[Airline](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The%20Show%20(Airline).html)
+6. Cost Saving
 
-[Airport](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Airport-.html)
+[3. Airport](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The-Show--Airport-.html)
 
-[Safety](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The%20Show%20(Safety).html)
+[4. Airline](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The%20Show%20(Airline).html)
+
+[5. Safety](https://htmlpreview.github.io/?https://github.com/csun32/DataVisualization-TheShow/blob/main/html%20Rmd/The%20Show%20(Safety).html)
 
 ## Questions/Feedback
 
